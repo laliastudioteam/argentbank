@@ -17,13 +17,7 @@ function Header() {
 					</NavLink>
 
 					<h1 class="sr-only">Argent Bank</h1>
-
-					<div>
-						<a class="main-nav-item" href="./sign-in.html">
-							<i class="fa fa-user-circle"></i>
-							Sign In
-						</a>
-					</div>
+					<Nav />
 				</nav>
 			</div>
 		</div>

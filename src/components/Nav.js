@@ -4,73 +4,31 @@ import {NavLink} from "react-router-dom";
 
 function Nav() {
 	return (
-		<nav className="navigation">
-			<ul className="navigation-list">
-				<li className="navigation-list-element">
-					<NavLink
-						to="/home"
-						className={({isActive}) =>
-							isActive
-								? "navigation-list-element-link-active"
-								: "navigation-list-element-link-inactive"
-						}
-					>
-						Accueil
-					</NavLink>
-				</li>
-				<li className="navigation-list-element">
-					<NavLink
-						to="/account"
-						className={({isActive}) =>
-							isActive
-								? "navigation-list-element-link-active"
-								: "navigation-list-element-link-inactive"
-						}
-					>
-						Profil
-					</NavLink>
-				</li>
-
-				<li className="navigation-list-element">
-					<NavLink
-						to="/reglages"
-						className={({isActive}) =>
-							isActive
-								? "navigation-list-element-link-active"
-								: "navigation-list-element-link-inactive"
-						}
-					>
-						Réglages
-					</NavLink>
-				</li>
-
-				<li className="navigation-list-element">
-					<NavLink
-						to="/communaute"
-						className={({isActive}) =>
-							isActive
-								? "navigation-list-element-link-active"
-								: "navigation-list-element-link-inactive"
-						}
-					>
-						Communauté
-					</NavLink>
-				</li>
-
-				<li className="navigation-list-element">
-					<NavLink
-						to="/about"
-						className={({isActive}) =>
-							isActive
-								? "navigation-list-element-link-active"
-								: "navigation-list-element-link-inactive"
-						}
-					>
-						A propos
-					</NavLink>
-				</li>
-			</ul>
-		</nav>
+		<>
+			<div>
+				<NavLink
+					to="/signin"
+					className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+				>
+					<i class="fa fa-user-circle"></i>
+					Sign In
+				</NavLink>
+				<NavLink
+					to="/user"
+					className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+				>
+					<i class="fa fa-user-circle"></i>
+					Tony
+				</NavLink>
+				<NavLink
+					to="/signin"
+					className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+				>
+					<i class="fa fa-sign-out"></i>
+					Sign out
+				</NavLink>
+			</div>
+		</>
 	);
 }
 export default Nav;

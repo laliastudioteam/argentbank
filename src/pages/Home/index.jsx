@@ -1,10 +1,8 @@
 import React from "react";
 import {useEffect} from "react";
 
-import {useParams, useNavigate} from "react-router-dom";
-
-import Hero from "../components/Hero";
-import Feature from "../components/Feature";
+import Hero from "../../components/Hero";
+import Feature from "../../components/Feature";
 
 function Home() {
 	return (

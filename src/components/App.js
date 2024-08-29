@@ -7,6 +7,8 @@ import Footer from "./Footer";
 
 // Pages
 import Home from "../pages/Home";
+import Signin from "../pages/Signin";
+import User from "../pages/User";
 
 import "../styles/App.css";
 const fakeData = 0;
@@ -19,9 +21,12 @@ function App() {
 					<Header />
 					<div className="main-container">
 						<Routes>
-							<Route path="/" element={<Home fake={fakeData} />} />
-							<Route path="/:id" element={<Home fake={fakeData} />} />
-							<Route path="/home" element={<Home fake={fakeData} />} />
+							<Route path="/" element={<Home />} />
+							<Route path="/user" element={<User />} />
+							<Route path="/user:id" element={<User />} />
+							<Route path="/home" element={<Home />} />
+							<Route path="/signin" element={<Signin />} />
+							<Route path="/signin" element={<Signin unlog={true} />} />
 						</Routes>
 					</div>
 					<Footer />
