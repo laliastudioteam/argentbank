@@ -1,47 +1,14 @@
 import React from "react";
 import {useEffect} from "react";
 
-import {useParams, useNavigate} from "react-router-dom";
+import SignInContent from "../../components/SignInContent.js";
 
-import Hero from "../../components/Hero";
-import Feature from "../../components/Feature";
+import "../../styles/SignInContent.css";
 
 function Signin() {
 	return (
-		<main>
-			<Hero
-				data={{
-					title: "",
-					items: ["SIgninNo fees", "No minimum deposit", "High interest rates"],
-					text: "Open a savings account with Argent Bank today!",
-				}}
-			/>
-			<section class="features">
-				<h2 class="sr-only">Signin</h2>
-				<Feature
-					data={{
-						icon: "iconChat",
-						title: "You are our #1 priority",
-						text:
-							"Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes.",
-					}}
-				/>
-				<Feature
-					data={{
-						icon: "iconMoney",
-						title: "More savings means higher rates",
-						text: "The more you save with us, the higher your interest rate will be!",
-					}}
-				/>
-				<Feature
-					data={{
-						icon: "iconSecurity",
-						title: "Security you can trust",
-						text:
-							"We use top of the line encryption to make sure your data and money is always safe.",
-					}}
-				/>
-			</section>
+		<main class="main bg-dark">
+			<SignInContent />
 		</main>
 	);
 }
