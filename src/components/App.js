@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 //Components
-import Header from "./Header";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 // Pages
@@ -18,7 +18,7 @@ function App() {
 		<React.StrictMode>
 			<div>
 				<Router>
-					<Header />
+					<Nav />
 					<div className="main-container">
 						<Routes>
 							<Route path="/" element={<Home />} />

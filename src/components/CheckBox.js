@@ -5,7 +5,7 @@ import "../styles/CheckBox.css";
 function CheckBox(d) {
 	const {label, titleId} = d.data;
 	return (
-		<div class="input-remember">
+		<div className="input-remember">
 			<input type="checkbox" id={titleId} />
 			<label for={titleId}>{label}</label>
 		</div>

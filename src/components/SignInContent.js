@@ -5,14 +5,14 @@ import CheckBox from "../components/CheckBox";
 
 function SignInContent() {
 	return (
-		<section class="sign-in-content">
-			<i class="fa fa-user-circle sign-in-icon"></i>
+		<section className="sign-in-content">
+			<i className="fa fa-user-circle sign-in-icon"></i>
 			<h1>Sign In</h1>
 			<form>
 				<InputWrapper data={{label: "username", textId: "username"}} />
 				<InputWrapper data={{label: "password", textId: "password"}} />
 				<CheckBox data={{label: "Rember me", textid: "remember-me"}} />
-				<button class="sign-in-button">Sign In</button>
+				<button className="sign-in-button">Sign In</button>
 			</form>
 		</section>
 	);

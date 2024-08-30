@@ -5,14 +5,14 @@
     font-size: 1.1rem;
     font-weight: bold;
     margin-top: 1rem;
-    border-color: #00bc77;
-    background-color: #00bc77;
-    color: #fff;
+    border-color: $color1;
+    background-color: $color1;
+    color: $color2;
 }
 
 .sign-in-content {
     box-sizing: border-box;
-    background-color: white;
+    background-color: $color2;
     width: 300px;
     margin: 0 auto;
     margin-top: 3rem;

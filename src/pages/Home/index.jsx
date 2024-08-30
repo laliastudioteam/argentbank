@@ -14,8 +14,8 @@ function Home() {
 					text: "Open a savings account with Argent Bank today!",
 				}}
 			/>
-			<section class="features">
-				<h2 class="sr-only">Features</h2>
+			<section className="features">
+				<h2 className="sr-only">Features</h2>
 				<Feature
 					data={{
 						icon: "iconChat",

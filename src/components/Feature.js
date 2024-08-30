@@ -14,9 +14,9 @@ function Feature(d) {
 	const {icon, title, text} = d.data;
 
 	return (
-		<div class="feature-item">
-			<img src={ArrayIcons[icon]} alt={icon} class="feature-icon" />
-			<h3 class="feature-item-title">{title}</h3>
+		<div className="feature-item">
+			<img src={ArrayIcons[icon]} alt={icon} className="feature-icon" />
+			<h3 className="feature-item-title">{title}</h3>
 			<p>{text}</p>
 		</div>
 	);

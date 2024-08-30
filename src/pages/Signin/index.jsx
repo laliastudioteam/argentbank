@@ -7,7 +7,7 @@ import "../../styles/SignInContent.css";
 
 function Signin() {
 	return (
-		<main class="main bg-dark">
+		<main className="main bg-dark">
 			<SignInContent />
 		</main>
 	);

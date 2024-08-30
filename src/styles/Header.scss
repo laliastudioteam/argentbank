@@ -9,11 +9,11 @@
 
 .main-nav a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $color5;
 }
 
 .main-nav a.router-link-exact-active {
-    color: #42b983;
+    color: $color6;
 }
 
 .main-nav-item {

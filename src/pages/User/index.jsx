@@ -3,21 +3,14 @@ import {useEffect} from "react";
 
 import {useParams, useNavigate} from "react-router-dom";
 
-import EditUser from "../../components/EditUser";
 import Account from "../../components/Account";
+import Header from "../../components/Header";
 
 function User() {
 	return (
-		<main class="main bg-dark">
-			<div class="header">
-				<h1>
-					Welcome back
-					<br />
-					Tony Jarvis!
-				</h1>
-				<EditUser />
-			</div>
-			<h2 class="sr-only">Accounts</h2>
+		<main className="main bg-dark">
+			<Header />
+			<h2 className="sr-only">Accounts</h2>
 			<Account
 				data={{
 					title: "Argent Bank Checking (x8349)",
@@ -32,7 +25,6 @@ function User() {
 					description: "Available Balance",
 				}}
 			/>
-
 			<Account
 				data={{
 					title: "Argent Bank Credit Card (x8349)",

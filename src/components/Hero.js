@@ -8,15 +8,15 @@ function Hero(d) {
 	const {title, items, text} = d.data;
 	console.log(items);
 	return (
-		<div class="hero">
-			<section class="hero-content">
-				<h2 class="sr-only">{title}</h2>
+		<div className="hero">
+			<section className="hero-content">
+				<h2 className="sr-only">{title}</h2>
 				{items.map((item, index) => (
-					<p class="subtitle" key={index}>
+					<p className="subtitle" key={index}>
 						{item}
 					</p>
 				))}
-				<p class="text">{text}</p>
+				<p className="text">{text}</p>
 			</section>
 		</div>
 	);
