@@ -10,13 +10,18 @@ function ButtonUser(d) {
 	const dispatch = useDispatch();
 
 	const handleClick = () => {
-		console.log("click");
 		dispatch(toggleFormVisibility());
 	};
 
 	if (type === "editButton") {
 		return (
 			<button onClick={handleClick} className="edit-button">
+				{text}
+			</button>
+		);
+	} else if (type === "cancelButton") {
+		return (
+			<button onClick={handleClick} className="form-button">
 				{text}
 			</button>
 		);

@@ -1,3 +1,25 @@
-.user {
-    color: $color2;
+@import "base";
+
+.formUser {
+    display: flex;
+    width: 520px;
+    margin: auto;
+    flex-direction: column;
+    &-line {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        &-column {
+            display: flex;
+            width: 50%;
+            &-left {
+                justify-content: right;
+                margin-right: 10px;
+            }
+            &-right {
+                justify-content: left;
+                margin-left: 10px;
+            }
+        }
+    }
 }

@@ -1,3 +1,24 @@
-.user {
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.formUser {
+  display: flex;
+  width: 520px;
+  margin: auto;
+  flex-direction: column;
+}
+.formUser-line {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.formUser-line-column {
+  display: flex;
+  width: 50%;
+}
+.formUser-line-column-left {
+  justify-content: right;
+  margin-right: 10px;
+}
+.formUser-line-column-right {
+  justify-content: left;
+  margin-left: 10px;
 }/*# sourceMappingURL=EditUser.css.map */

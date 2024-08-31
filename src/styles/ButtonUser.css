@@ -8,9 +8,11 @@
 }
 
 .form-button {
-  border-color: #00bc77;
-  background-color: #00bc77;
-  color: #ffffff;
+  border-color: #6458f5;
+  background-color: #ffffff;
+  color: #6458f5;
   font-weight: bold;
   padding: 10px;
+  width: 200px;
+  height: 40px;
 }/*# sourceMappingURL=ButtonUser.css.map */

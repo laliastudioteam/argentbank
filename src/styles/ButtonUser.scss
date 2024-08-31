@@ -9,9 +9,11 @@
 }
 
 .form-button {
-    border-color: $color1;
-    background-color: $color1;
-    color: $color2;
+    border-color: $color7;
+    background-color: $color2;
+    color: $color7;
     font-weight: bold;
     padding: 10px;
+    width: 200px;
+    height: 40px;
 }

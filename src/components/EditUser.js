@@ -8,16 +8,35 @@ import InputUser from "../components/InputUser";
 
 function EditUser() {
 	const isFormVisible = useSelector(state => state.form.isFormVisible);
+	function onSubmit(event) {
+		console.log("form submit");
+		event.preventDefault();
 
+		// custom form handling here
+	}
 	return (
 		<>
-			<ButtonUser data={{type: "editButton", text: "Edit user", action: "test"}} />
+			{!isFormVisible && (
+				<ButtonUser data={{type: "editButton", text: "Edit user", action: "test"}} />
+			)}
 			{isFormVisible && (
-				<form>
-					<InputUser data={{label: "forename", textId: "forename"}} />
-					<InputUser data={{label: "name", textId: "name"}} />
-					<ButtonUser data={{type: "formButton", text: "Save", action: "test"}} />
-					<ButtonUser data={{type: "formButton", text: "Cancel", action: "test"}} />
+				<form className="formUser" onSubmit={onSubmit}>
+					<div className="formUser-line">
+						<div className="formUser-line-column formUser-line-column-left">
+							<InputUser data={{label: "forename", textId: "forename"}} placeholder="Tony" />
+						</div>
+						<div className="formUser-line-column formUser-line-column-right">
+							<InputUser data={{label: "name", textId: "name"}} placeholder="Jarvis" />
+						</div>
+					</div>
+					<div className="formUser-line">
+						<div className="formUser-line-column formUser-line-column-left">
+							<ButtonUser data={{type: "formButton", text: "Save", action: "test"}} />
+						</div>
+						<div className="formUser-line-column formUser-line-column-right">
+							<ButtonUser data={{type: "cancelButton", text: "Cancel", action: "test"}} />
+						</div>
+					</div>
 				</form>
 			)}
 		</>
