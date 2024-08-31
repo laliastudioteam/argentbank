@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Provider} from "react-redux";
+
+import {store} from "../app/store";
 
 //Components
 import Nav from "./Nav";
@@ -15,24 +18,26 @@ const fakeData = 0;
 
 function App() {
 	return (
-		<React.StrictMode>
-			<div>
-				<Router>
-					<Nav />
-					<div className="main-container">
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/user" element={<User />} />
-							<Route path="/user:id" element={<User />} />
-							<Route path="/home" element={<Home />} />
-							<Route path="/signin" element={<Signin />} />
-							<Route path="/signin" element={<Signin unlog={true} />} />
-						</Routes>
-					</div>
-					<Footer />
-				</Router>
-			</div>
-		</React.StrictMode>
+		<Provider store={store}>
+			<React.StrictMode>
+				<div>
+					<Router>
+						<Nav />
+						<div className="main-container">
+							<Routes>
+								<Route path="/" element={<Home />} />
+								<Route path="/user" element={<User />} />
+								<Route path="/user:id" element={<User />} />
+								<Route path="/home" element={<Home />} />
+								<Route path="/signin" element={<Signin />} />
+								<Route path="/signin" element={<Signin unlog={true} />} />
+							</Routes>
+						</div>
+						<Footer />
+					</Router>
+				</div>
+			</React.StrictMode>
+		</Provider>
 	);
 }
 

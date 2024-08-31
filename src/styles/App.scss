@@ -17,6 +17,11 @@ body {
 
 .main {
   flex: 1;
+  height: calc(100vh - 50px - 100px);
+}
+
+.main-container {
+  height: 100%;
 }
 
 .bg-dark {

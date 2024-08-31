@@ -9,9 +9,9 @@ function SignInContent() {
 			<i className="fa fa-user-circle sign-in-icon"></i>
 			<h1>Sign In</h1>
 			<form>
-				<InputWrapper data={{label: "username", textId: "username"}} />
-				<InputWrapper data={{label: "password", textId: "password"}} />
-				<CheckBox data={{label: "Rember me", textid: "remember-me"}} />
+				<InputWrapper data={{label: "Username", textId: "username"}} />
+				<InputWrapper data={{label: "Password", textId: "password"}} />
+				<CheckBox data={{label: "Remember me", textid: "remember-me"}} />
 				<button className="sign-in-button">Sign In</button>
 			</form>
 		</section>
