@@ -1,41 +1,56 @@
-import "../styles/Nav.css";
 import React from "react";
-import {NavLink} from "react-router-dom";
-
+import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../features/auth/authSlice";
+import {NavLink, useNavigate} from "react-router-dom";
+import "../styles/Nav.css";
 import logoHeader from "../assets/logos/argentBankLogo.png";
 
 function Nav() {
+	const dispatch = useDispatch();
+	const token = useSelector(state => state.auth.token);
+	const navigate = useNavigate();
+	const userProfile = useSelector(state => state.auth.userProfile);
+
+	const handleLogout = () => {
+		dispatch(logout());
+	};
+	console.log(userProfile);
 	return (
 		<>
 			<nav className="main-nav">
 				<NavLink to="./home">
 					<img src={logoHeader} className="main-nav-logo-image" alt="ArgentBank" />
 				</NavLink>
-
 				<h1 className="sr-only">Argent Bank</h1>
-				<div>
-					<NavLink
-						to="/signin"
-						className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
-					>
-						<i className="fa fa-user-circle"></i>
-						Sign In
-					</NavLink>
-					<NavLink
-						to="/user"
-						className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
-					>
-						<i className="fa fa-user-circle"></i>
-						Tony
-					</NavLink>
-					<NavLink
-						to="/signin"
-						className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
-					>
-						<i className="fa fa-sign-out"></i>
-						Sign out
-					</NavLink>
-				</div>
+				{token ? (
+					<div>
+						<NavLink
+							to="/user"
+							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+						>
+							<i className="fa fa-user-circle"></i>
+							{userProfile ? userProfile.firstName : "Not connected"}
+						</NavLink>
+						<NavLink
+							to="/signin"
+							onClick={handleLogout}
+							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+						>
+							<i className="fa fa-sign-out"></i>
+							Sign out
+						</NavLink>
+					</div>
+				) : (
+					<div>
+						<NavLink
+							to="/signin"
+							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
+						>
+							<i className="fa fa-user-circle"></i>
+							Sign In
+						</NavLink>
+					</div>
+				)}
 			</nav>
 		</>
 	);

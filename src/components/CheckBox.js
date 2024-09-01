@@ -7,7 +7,7 @@ function CheckBox(d) {
 	return (
 		<div className="input-remember">
 			<input type="checkbox" id={titleId} />
-			<label for={titleId}>{label}</label>
+			<label htmlFor={titleId}>{label}</label>
 		</div>
 	);
 }

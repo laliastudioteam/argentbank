@@ -2,13 +2,16 @@ import React from "react";
 
 import "../styles/InputWrapper.css";
 
-function inputWrapper(d) {
-	const {label, textId} = d.data;
+const inputWrapper = ({label, type, textId, onChange}) => {
 	return (
 		<div className="input-wrapper">
-			<label for={textId}>{label}</label>
-			<input type="text" id={textId} />
+			<label htmlFor={textId}>{label}</label>
+			<input
+				type={type}
+				id={textId}
+				onChange={(e, test) => onChange(e.target.value)}
+			/>
 		</div>
 	);
-}
+};
 export default inputWrapper;
