@@ -1,8 +1,8 @@
 import React from "react";
 import {useEffect} from "react";
-
+// Import components
 import SignInContent from "../../components/SignInContent.js";
-
+// Import styles
 import "../../styles/SignInContent.css";
 
 function Signin() {

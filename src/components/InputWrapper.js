@@ -1,5 +1,5 @@
 import React from "react";
-
+// Import styles
 import "../styles/InputWrapper.css";
 
 const inputWrapper = ({label, type, textId, onChange}) => {

@@ -1,8 +1,12 @@
 import React from "react";
+// Import Redux
 import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../features/auth/authSlice";
+// Import React-dom
 import {NavLink, useNavigate} from "react-router-dom";
+// Import styles
 import "../styles/Nav.css";
+// Import Pictures
 import logoHeader from "../assets/logos/argentBankLogo.png";
 
 function Nav() {
@@ -32,7 +36,7 @@ function Nav() {
 							{userProfile ? userProfile.firstName : "Not connected"}
 						</NavLink>
 						<NavLink
-							to="/signin"
+							to="/home"
 							onClick={handleLogout}
 							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
 						>

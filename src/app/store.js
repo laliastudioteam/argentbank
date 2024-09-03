@@ -5,7 +5,7 @@ import authReducer from "../features/auth/authSlice";
 
 const preloadedState = {
 	auth: {
-		token: localStorage.getItem("authToken"), // Charger le token depuis localStorage
+		token: localStorage.getItem("authToken"),
 		loading: false,
 		error: null,
 	},

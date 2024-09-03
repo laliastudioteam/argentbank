@@ -1,7 +1,8 @@
 import React, {useState} from "react";
+// Import Redux
 import {useDispatch} from "react-redux";
 import {toggleFormVisibility} from "../features/form/FormSlice";
-
+// Import styles
 import "../styles/ButtonUser.css";
 
 function ButtonUser(d) {

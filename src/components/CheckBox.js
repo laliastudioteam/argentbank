@@ -1,5 +1,6 @@
 import React from "react";
 
+// Import styles
 import "../styles/CheckBox.css";
 
 function CheckBox(d) {

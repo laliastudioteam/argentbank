@@ -1,7 +1,7 @@
 import React from "react";
-
+// Import styles
 import "../styles/Hero.css";
-
+// Import Pictures
 import Banktree from "../assets/images/bank-tree.jpeg";
 
 function Hero(d) {

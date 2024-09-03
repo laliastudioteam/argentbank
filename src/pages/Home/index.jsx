@@ -1,6 +1,6 @@
 import React from "react";
 import {useEffect} from "react";
-
+// Import components
 import Hero from "../../components/Hero";
 import Feature from "../../components/Feature";
 

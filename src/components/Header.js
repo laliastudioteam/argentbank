@@ -1,7 +1,9 @@
 import React from "react";
+// Import Redux
 import {useSelector} from "react-redux";
-
+// Import styles
 import "../styles/Header.css";
+// Import components
 import EditUser from "../components/EditUser";
 
 function Header() {

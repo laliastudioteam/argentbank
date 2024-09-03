@@ -1,11 +1,12 @@
 import React, {useState} from "react";
+// Import Redux
 import {useSelector, useDispatch} from "react-redux";
-
+import {updateUserProfile} from "../features/auth/authSlice";
+// Import styles
 import "../styles/EditUser.css";
-
+// Import components
 import ButtonUser from "../components/ButtonUser";
 import InputUser from "../components/InputUser";
-import {updateUserProfile} from "../features/auth/authSlice";
 
 function EditUser() {
 	const dispatch = useDispatch();

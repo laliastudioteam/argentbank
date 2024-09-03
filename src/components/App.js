@@ -1,18 +1,19 @@
 import React, {useState} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// Import Redux
 import {Provider} from "react-redux";
-
 import {store} from "../app/store";
 
-//Components
+// Import components
 import Nav from "./Nav";
 import Footer from "./Footer";
 
-// Pages
+// Import pages
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import User from "../pages/User";
 
+// Import styles
 import "../styles/App.css";
 const fakeData = 0;
 
@@ -30,7 +31,6 @@ function App() {
 								<Route path="/user:id" element={<User />} />
 								<Route path="/home" element={<Home />} />
 								<Route path="/signin" element={<Signin />} />
-								<Route path="/signin" element={<Signin unlog={true} />} />
 							</Routes>
 						</div>
 						<Footer />

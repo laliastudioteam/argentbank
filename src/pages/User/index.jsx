@@ -1,8 +1,9 @@
 import React from "react";
 import {useEffect} from "react";
-
+// Import React-dom
 import {useParams, useNavigate} from "react-router-dom";
 
+// Import components
 import Account from "../../components/Account";
 import Header from "../../components/Header";
 

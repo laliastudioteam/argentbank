@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-
+// Login User
 export const loginUser = createAsyncThunk(
 	"auth/loginUser",
 	async ({email, password}, thunkAPI) => {
@@ -23,7 +23,7 @@ export const loginUser = createAsyncThunk(
 		}
 	}
 );
-
+// Fetch User
 export const fetchUserProfile = createAsyncThunk(
 	"auth/fetchUserProfile",
 	async (_, thunkAPI) => {
@@ -46,7 +46,7 @@ export const fetchUserProfile = createAsyncThunk(
 		return data.body;
 	}
 );
-
+// Update User Profile
 export const updateUserProfile = createAsyncThunk(
 	"auth/updateUserProfile",
 
@@ -72,7 +72,7 @@ export const updateUserProfile = createAsyncThunk(
 		return data.body;
 	}
 );
-
+// Auth Slice
 const authSlice = createSlice({
 	name: "auth",
 	initialState: {

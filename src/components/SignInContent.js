@@ -1,11 +1,10 @@
 import React, {useState} from "react";
-
+// Import Redux
 import {useDispatch, useSelector} from "react-redux";
-
 import {loginUser, fetchUserProfile} from "../features/auth/authSlice";
-
+// import React-dom
 import {useNavigate} from "react-router-dom";
-
+// Import components
 import InputWrapper from "../components/InputWrapper";
 import CheckBox from "../components/CheckBox";
 
@@ -23,8 +22,8 @@ function SignInContent() {
 		dispatch(loginUser({email, password}))
 			.unwrap()
 			.then(() => {
-				dispatch(fetchUserProfile()); // Récupérer les informations utilisateur après la connexion
-				navigate("/user"); // Rediriger après la récupération des données
+				dispatch(fetchUserProfile());
+				navigate("/user");
 			})
 			.catch(err => console.error("Failed to login:", err));
 	};

@@ -1,3 +1,4 @@
+// Import styles
 import "../styles/Footer.css";
 
 function Footer() {

@@ -1,3 +1,4 @@
+// Import styles
 import "../styles/Account.css";
 
 function Account(d) {
