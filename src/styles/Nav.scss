@@ -25,6 +25,11 @@
 .main-nav-item {
     text-decoration: none;
     margin-right: 0.5rem;
+    &-text {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .main-nav-item:hover {

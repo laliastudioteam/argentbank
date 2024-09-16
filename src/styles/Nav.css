@@ -25,6 +25,11 @@
   text-decoration: none;
   margin-right: 0.5rem;
 }
+@media (max-width: 768px) {
+  .main-nav-item-text {
+    display: none;
+  }
+}
 
 .main-nav-item:hover {
   text-decoration: underline;

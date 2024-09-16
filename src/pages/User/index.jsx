@@ -13,6 +13,7 @@ function User() {
 	const navigate = useNavigate();
 	const token = useSelector(state => state.auth.token);
 
+	// Redirect if not loggued in
 	useEffect(() => {
 		if (!token) {
 			navigate("../home");

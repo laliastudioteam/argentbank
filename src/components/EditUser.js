@@ -2,6 +2,7 @@ import React, {useState} from "react";
 // Import Redux
 import {useSelector, useDispatch} from "react-redux";
 import {updateUserProfile} from "../features/auth/authSlice";
+import {toggleFormVisibility} from "../features/form/FormSlice";
 // Import styles
 import "../styles/EditUser.css";
 // Import components
@@ -13,7 +14,7 @@ function EditUser() {
 	const isFormVisible = useSelector(state => state.form.isFormVisible);
 
 	const userProfile = useSelector(state => state.auth.userProfile);
-	console.log(userProfile.firstName + userProfile.lastName);
+
 	const [firstName, setFirstName] = useState(userProfile.firstName);
 	const [lastName, setLastName] = useState(userProfile.lastName);
 
@@ -23,8 +24,7 @@ function EditUser() {
 
 	function onSubmit(event) {
 		event.preventDefault();
-
-		console.log("voila ce que je veux mettre a jour" + firstName + lastName);
+		dispatch(toggleFormVisibility());
 		// Envoyer les nouvelles données au backend via Redux
 		dispatch(updateUserProfile({firstName, lastName}));
 	}

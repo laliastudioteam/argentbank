@@ -33,7 +33,11 @@ function Nav() {
 							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
 						>
 							<i className="fa fa-user-circle"></i>
-							{userProfile ? userProfile.firstName : "Not connected"}
+							{userProfile ? (
+								<span className="main-nav-item-text">{userProfile.firstName}</span>
+							) : (
+								"Not connected"
+							)}
 						</NavLink>
 						<NavLink
 							to="/home"
@@ -41,7 +45,7 @@ function Nav() {
 							className={({isActive}) => (isActive ? "main-nav-item" : "main-nav-item")}
 						>
 							<i className="fa fa-sign-out"></i>
-							Sign out
+							<span className="main-nav-item-text">Sign out</span>
 						</NavLink>
 					</div>
 				) : (

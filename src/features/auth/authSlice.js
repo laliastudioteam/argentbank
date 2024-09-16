@@ -73,6 +73,7 @@ export const updateUserProfile = createAsyncThunk(
 		return data.body;
 	}
 );
+
 // Auth Slice
 const authSlice = createSlice({
 	name: "auth",

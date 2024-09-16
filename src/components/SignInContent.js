@@ -30,8 +30,8 @@ function SignInContent() {
 
 	return (
 		<section className="sign-in-content">
-			<i className="fa fa-user-circle sign-in-icon"></i>
-			<h1>Sign In</h1>
+			<i className="fa fa-user-circle sign-in-content-icon"></i>
+			<h1 className="sign-in-content-title">Sign In</h1>
 			<form onSubmit={handleSubmit}>
 				<InputWrapper label="Username" type="text" textId="email" onChange={setEmail} />
 				<InputWrapper

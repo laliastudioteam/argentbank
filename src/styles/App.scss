@@ -17,7 +17,9 @@ body {
 
 .main {
   flex: 1;
-  height: calc(100vh - 50px - 100px);
+  @media (min-width: $maxsize_small) {
+    height: calc(100vh - 50px - 100px);
+  }
 }
 
 .main-container {
@@ -88,11 +90,6 @@ body {
 .account-content-wrapper {
   width: 100%;
   flex: 1;
-}
-
-.header {
-  color: $color2;
-  margin-bottom: 2rem;
 }
 
 .transaction-button {

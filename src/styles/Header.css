@@ -1,35 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
+.header {
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
-
-.main-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.main-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-.main-nav-item {
-  text-decoration: none;
-  margin-right: 0.5rem;
-}
-
-.main-nav-item:hover {
-  text-decoration: underline;
-}
-
-.main-nav-logo {
-  display: flex;
-  align-items: center;
-}
-
-.main-nav-logo-image {
-  max-width: 100%;
-  width: 200px;
+.header-title {
+  margin: 0;
 }/*# sourceMappingURL=Header.css.map */

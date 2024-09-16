@@ -1,3 +1,5 @@
+@import "base";
+
 .sign-in-button {
     display: block;
     width: 100%;
@@ -15,12 +17,13 @@
     background-color: $color2;
     width: 300px;
     margin: 0 auto;
-    margin-top: 3rem;
     padding: 2rem;
-}
-
-.sign-in-icon {
-    font-size: 5rem;
+    &-icon {
+        font-size: 5rem;
+    }
+    &-title {
+        margin: 0;
+    }
 }
 
 .input-remember {
